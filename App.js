@@ -1,12 +1,28 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import BottomTabs from './source/navigation/BottomTabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { useFonts } from 'expo-font';
+const Tab = createBottomTabNavigator();
 
 export default function App() {
+
+const[fontsLoaded] = useFonts({
+  'Inter-Black': require('./assets/fonts/Inter-Black.ttf'),
+  'Inter-Bold': require('./assets/fonts/Inter-Bold.ttf'),
+  'Inter-Regular': require('./assets/fonts/Inter-Regular.ttf'),
+  'Inter-SemiBold': require('./assets/fonts/Inter-SemiBold.ttf'),
+})
+
+if (!fontsLoaded){
+  return null;
+}
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <NavigationContainer>
+        <BottomTabs/>
+      </NavigationContainer>
   );
 }
 
