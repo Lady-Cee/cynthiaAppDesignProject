@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import BottomTabs from './source/navigation/BottomTabs';
+import BottomTabs from './source/navigation/BottomTabs.js';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useFonts } from 'expo-font';
-import StackScreens from './source/navigation/StackScreens'
+import StackScreens from './source/navigation/StackScreens.js';
 
 const Tab = createBottomTabNavigator();
 
