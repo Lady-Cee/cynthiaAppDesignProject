@@ -1,8 +1,11 @@
 const categories=[
+
+          
     {
+      
         id:0,
         title:'Nice food',
-        image: require('../../assets/images/food4.jpg'),
+         image: require('../../assets/images/food4.jpg'),
         price:20,
         rating: 2,
     },

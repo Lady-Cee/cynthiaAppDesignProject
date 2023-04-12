@@ -12,18 +12,18 @@ const ChickenSection = () => {
             style={{width:150, height:120, borderRadius:10, marginLeft:10}}/>
         </View>
 
-       <View style={{marginLeft:30, marginTop:20}}>
+       <View style={{marginLeft:25, marginTop:20}}>
             <View  >
-                <Text>Big Fried Chicken</Text>
+                <Text style={{fontFamily:'Inter-Bold', fontSize:20, lineHeight:30}} >Big Fried Chicken</Text>
             </View>
 
             <View >
-                <Text>Gamnibar . 9.2km</Text>
+                <Text style={{fontFamily:'Inter-Regular', fontSize:14, color:'grey', lineHeight:30}}>Gamnibar . 9.2km</Text>
             </View>
 
             <View style={{flexDirection:'row'}} >
                 <Image source={require('../../assets/icons/star.png')}
-                style={{width:15, height:15}}/><Text>4.4</Text>
+                style={{width:15, height:15}}/><Text  style={{fontFamily:'Inter-Bold', fontSize:14, marginLeft:10}}>4.4</Text>
             </View>
             </View>
 

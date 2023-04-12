@@ -1,4 +1,4 @@
-import { View, Text, ImageBackground, Image, FlatList} from 'react-native'
+import { View, Text, Button, ImageBackground, Image, FlatList, TouchableOpacity} from 'react-native'
 import { StatusBar } from 'expo-status-bar';
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
@@ -9,8 +9,10 @@ import  {categories}  from '../external_data/externalData';
 import NearSection from '../components/NearSection';
 import ChickenSection from '../components/ChickenSection';
 import { ScrollView } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-const Home = () => {
+const Home = ({navigation}) => {
    
   return (
     <SafeAreaView style={{ flex: 1,
@@ -48,11 +50,13 @@ const Home = () => {
                     keyExtractor={(item) => item.id}
                     renderItem={({item, index})=>{
                         return (
-                            <FoodItem
+                           <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
+                                 <FoodItem
                                  FoodContent={item} 
                                  marginLeft={index == 0 ? 20 : 12}
                                  marginRight={index == item.length-1? 20 : 8}
                                  />
+                           </TouchableOpacity>
                         ) 
 
                     }}/>
@@ -62,9 +66,8 @@ const Home = () => {
         <NearSection title='Near of you'/> 
 
         <ChickenSection/>
+    
                 </View>
-
-                
            
         </ImageBackground>
  

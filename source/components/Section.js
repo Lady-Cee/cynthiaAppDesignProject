@@ -30,8 +30,7 @@ const Section = ({onPress,title,myStyle}) => {
                  color:'green'}}>View All</Text>
       </TouchableOpacity>
 
-   
-      
+         
     </View>
 
     
